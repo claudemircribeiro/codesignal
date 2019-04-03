@@ -1,0 +1,32 @@
+package br.com.casadocodigo.java8;
+
+public class CodeFigths {
+	public static void main(String[] args) {
+		
+		int[][] matriz = {
+			      { 1, 2, 3},
+			      { 4, 5, 6 },
+			      { 7, 8, 9 }
+		       };
+		
+		rotateImage(matriz);
+		
+	}
+	static int[][] rotateImage(int[][] a) {
+		int dim1 = a.length;
+		int dim2 = a[0].length;
+		int b[][] = new int[dim1][dim2];
+		for(int i = 0 ; i < a.length; i++) {
+			int altura = a[i].length - 1;
+			for(int j = 0; j < a[i].length; j++) {
+				b[i][j] = a[altura][i];
+				altura--;
+			}
+		}
+		
+		return b;
+
+	}
+
+
+}
